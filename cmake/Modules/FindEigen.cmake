@@ -26,7 +26,7 @@ find_path(EIGEN_INCLUDE_DIR Eigen/Core
     PATH_SUFFIXES eigen3 include/eigen3 include)
 
 if(EIGEN_INCLUDE_DIR)
-  file(READ "${EIGEN_INCLUDE_DIR}/Eigen/src/Core/util/Macros.h" _eigen_version_header)
+  file(READ "${EIGEN_INCLUDE_DIR}/eigen3/Eigen/src/Core/util/Macros.h" _eigen_version_header)
 
   string(REGEX MATCH "define[ \t]+EIGEN_WORLD_VERSION[ \t]+([0-9]+)" _eigen_world_version_match "${_eigen_version_header}")
   set(EIGEN_WORLD_VERSION "${CMAKE_MATCH_1}")
