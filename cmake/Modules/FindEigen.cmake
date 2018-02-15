@@ -25,6 +25,8 @@ find_path(EIGEN_INCLUDE_DIR Eigen/Core
           "$ENV{PROGRAMFILES}/Eigen3" "$ENV{PROGRAMW6432}/Eigen3"
     PATH_SUFFIXES eigen3 include/eigen3 include)
 
+set(EIGEN_INCLUDE_DIR "${EIGEN_INCLUDE_DIR}/eigen3")
+
 if(EIGEN_INCLUDE_DIR)
   file(READ "${EIGEN_INCLUDE_DIR}/Eigen/src/Core/util/Macros.h" _eigen_version_header)
 
